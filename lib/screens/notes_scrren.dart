@@ -11,7 +11,11 @@ class NotesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: (){
-        showModalBottomSheet(context: context, builder: (context)
+        showModalBottomSheet(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(24)
+          ),
+          context: context, builder: (context)
         {
          return const AddNoteButtomSheet();
         }
@@ -24,7 +28,7 @@ class NotesScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 50,
+              height: 60,
             ),
             CustomAppBar(),
            Expanded(child: NotesListViwe(),
