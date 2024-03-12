@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
-import 'package:notes_app/widgets/custom_notes_item.dart';
 import 'package:notes_app/widgets/notes_list_viwe.dart';
 
 class NotesScreen extends StatelessWidget {
@@ -10,8 +8,11 @@ class NotesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  Scaffold(
-      body:  Padding(
+    return  Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+      shape: CircleBorder(),
+      child: const Icon(Icons.add),),
+      body:  const Padding(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
