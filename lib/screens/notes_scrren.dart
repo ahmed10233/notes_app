@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/custom_notes_item.dart';
+import 'package:notes_app/widgets/notes_list_viwe.dart';
 
 class NotesScreen extends StatelessWidget {
   const NotesScreen
@@ -17,7 +19,8 @@ class NotesScreen extends StatelessWidget {
               height: 50,
             ),
             CustomAppBar(),
-            NotesItem(),
+           Expanded(child: NotesListViwe(),
+           )
           ],
         ),
       ),
